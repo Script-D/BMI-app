@@ -1,0 +1,257 @@
+*,*::after,::before{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+:root{
+    --theme-color:#00c1ff;
+    --dark-color:#00376a;
+    --light-color:#f1fbff;
+
+    /* font-weights */
+    --font-nm:500;
+    --font-md:600;
+    --font-bd:800;
+
+    /* margins - paddings */
+    --margin-sm:1rem;
+    --margin-md:2rem;
+    --margin-lg:5rem;
+    
+     /* border-radius */
+    --border-rd:0.9rem;
+}
+
+html{
+    font-size:10px;
+    color:var(--light-color);
+    font-family: 'Archivo';
+    user-select: none;
+}
+
+body{
+    background-image: radial-gradient(#F1FBFF,#CAF7FF);
+}
+
+/* #CAF7FF  #F1FBFF */
+/* specific resets */
+li{
+    list-style: none;
+}
+
+button{
+    outline: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+/* utility class */
+
+.flex--{
+    display: flex;
+}
+
+.inshape_logo{
+    color:var(--theme-color);
+    font-weight:var(--font-bd);
+    font-size: 2rem;
+    margin:var(--margin-md);
+}
+
+.ham__menu{
+    background-image:url("../assets/logo-svg.svg");
+    height:12rem;
+    width: 15rem;
+    background-size:auto;
+    background-repeat: no-repeat;
+}
+
+.ham__menu.flex--{
+    justify-content: flex-start;
+    align-items:flex-start;
+}
+
+.ham-piece--{
+    height:0.5rem;
+    width:3.5rem;
+    border-radius: var(--border-rd);
+    background-color: var(--light-color);
+    display: inline-block;
+    margin:var(--margin-md);
+    position: relative;
+}
+
+.ham-piece--::after,.ham-piece--::before{
+    content: "";
+    height:100%;
+    background-color:inherit;
+    position: absolute;
+    display: inline-block;
+    border-radius: inherit;
+}
+
+.ham-piece--::before{
+    width:2.5rem;
+    top:1rem;
+}
+.ham-piece--::after{
+    width: 1.5rem;
+    top:2rem;
+}
+
+.navigation-menu.flex--{
+    justify-content:space-between;
+}
+
+.options__menu{
+    background-color:var(--theme-color);
+    margin:var(--margin-md);
+    border-radius: var(--border-rd);
+    border:0.7rem solid var(--light-color);
+    padding:1rem;
+}
+
+.options__menu.flex--{
+    justify-content: space-around;
+}
+
+.options--{
+    font-size:2rem;
+    color:var(--light-color);
+    font-weight: var(--font-bd);
+}
+
+.calculation__ui{
+    background-color: var(--theme-color);
+    margin:var(--margin-sm);
+    padding: var(--margin-sm);
+    border-radius: var(--border-rd);
+}
+
+.height-value.flex--{
+    justify-content: space-between;
+}
+
+.height--,.value-height--{
+    font-size:1.7rem;
+    font-weight: var(--font-bd);
+    margin:var(--margin-sm);
+    color:var(--dark-color);
+}
+
+.height-range--{
+    width:min(85vw,250rem);
+}
+
+.data-value--{
+    font-size:4rem;
+    font-weight: var(--font-md);
+    color: var(--dark-color);
+    text-align: center;
+    margin: var(--margin-sm);
+}
+
+.value-setter.flex--{
+  justify-content: space-between;
+  align-items: center;
+}
+
+.value-setter > .icon--{
+    height:3rem;
+    width:3rem;
+    text-align: center;
+    font-size: 2.6rem;
+    font-weight: var(--font-md);
+    color: var(--light-color);
+    background-color: var(--dark-color);
+    border-radius: 50%;
+    margin:var(--margin-sm);
+    cursor:pointer;
+}
+
+.setter--{
+    font-size: 1.8rem;
+    font-weight: var(--font-md);
+    color:var(--dark-color);
+}
+
+.data__setter{
+    width:16.7rem;
+    background-color: var(--light-color);
+    margin: var(--margin-md) auto var(--margin-sm) auto;
+    border-radius: var(--border-rd);
+}
+
+.calculate-button--{
+    font-size:2rem;
+    font-weight: var(--font-md);
+    background-color: var(--dark-color);
+    color:var(--light-color);
+    padding: var(--margin-md) 10rem;
+    border-radius: var(--border-rd);
+    margin:var(--margin-sm)
+}
+
+.calculate__button.flex--{
+    justify-content: center;
+}
+
+
+.result__card{
+    background-color: var(--dark-color);
+    border-radius: var(--border-rd);
+    width:33rem;
+    margin:var(--margin-sm);
+    padding: var(--margin-sm);
+}
+
+.result__card.flex--{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bmi-result.flex--{
+    align-items: center;
+    flex-direction: column;
+}
+
+.bmi-result{
+    margin-left: var(--margin-sm);
+    margin-top: var(--margin-sm);
+}
+
+.result-type{
+   color:#00FF3D;
+   font-size:1.5rem;
+   font-weight: var(--font-md);
+}
+
+.bmi-value--{
+    font-size: 8rem;
+    color:#00FF3D;
+    font-weight:var(--font-bd);
+}
+
+.title--,.range--{
+   font-size: 1.2rem;
+   color: #f2f2f2;
+   font-weight: var(--font-md);
+}
+
+.bmi-details{
+    margin:var(--margin-md);
+}
+
+.bmi-details.flex--{
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-your-bmi--{
+    font-size: 1.6rem;
+    font-weight:var(--font-md);
+    width:22rem;
+    margin-top: var(--margin-md);
+}
